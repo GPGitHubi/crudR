@@ -13,19 +13,9 @@ export default function AppForm( {navigation}) {
   function handleQuantityChange(quantidade){
     setQuantidade(quantidade)
   }
-  async function handleButtonPress(){
-    const listItem = {id: new Date().getTime(), 
-      descricao, quantidade};
-      let saveItems = []
-      const response = 
-      await AsyncStorage.getItem('items');;
-
-      if(response) saveItems = JSON.parse(response);
-      saveItems.push(listItem)
-
-
-      await AsyncStorage.setItem('items',
-        JSON.stringify(saveItems));
+  function handleButtonPress(){
+    console.log({id: new Date().getTime(), 
+      descricao, quantidade});
     navigation.navigate('AppList')
   }
   return (
