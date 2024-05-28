@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 
 export default function AppItem(props){
     return(
-        <View style={style.container}>
+        <View style={styles.container}>
             <Text style={StyleSheet.textITem}>
                 {props.item}
             </Text>
